@@ -5,18 +5,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="Header">
+          <a className="menu" style={{
+              padding: "20px",
+              textalign: "center",
+              background: "#1abc9c",
+              color: "white",
+              fontsize: "30px"
+          }}>
+            Seams
+          </a>
+        </div>
       </header>
     </div>
   );
