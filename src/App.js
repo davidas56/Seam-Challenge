@@ -9,7 +9,6 @@ function App() {
           <a className="menu" style={{
               padding: "20px",
               textalign: "center",
-              background: "#black",
               color: "white",
               fontsize: "30px",
               textalign: "center",
@@ -27,7 +26,19 @@ function App() {
         <div className="FooterCapture" style={{
           padding: "2%"
         }}>
-          <bottom> aaa</bottom>
+          <button style={{
+            padding: "10px",
+            fontsize: "20px",
+            fontfamily: "system-ui",
+            color: "white",
+            transitionduration: "0.4s",
+            backgroundcolor: "#04AA6D",
+            color: "black",
+            borderRadius: '5px',
+            overflow: 'hidden'
+          }}>
+             Show Emotions
+             </button>
         </div>
       </header>
     </div>
