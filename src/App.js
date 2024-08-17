@@ -25,7 +25,8 @@ function App() {
         <div className="EmotionVideo" style={{
           padding: "18%",
         }}>
-          <p> here comos the camerea if u want delete this this is only a guide</p>   
+          <p> here comos the camerea if u want delete this this is only a guide</p>
+          <WebcamComponent />  
         </div>
         <div className="FooterCapture" style={{
           padding: "2%"
