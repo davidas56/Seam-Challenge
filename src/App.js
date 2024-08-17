@@ -48,6 +48,8 @@ function App() {
           videoConstraints={videoConstraints}
           />
 
+          <p> here comos the camerea if u want delete this this is only a guide</p>
+          <WebcamComponent />  
         </div>
         <div className="FooterCapture"style={{
           padding: "2%"
