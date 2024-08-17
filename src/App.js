@@ -6,47 +6,66 @@ import Webcam from "react-webcam";
 const WebcamComponent = () => <Webcam />;
 
 function App() {
+  const videoConstraints = {
+    width: 1280,
+    height: 720,
+    facingMode: "user"
+  };
   return (
     <div className="App">
       <header className="App-header">
         <div className="Header">
-          <a className="menu" style={{
-              padding: "20px",
-              textalign: "center",
-              color: "white",
-              fontsize: "30px",
-              textalign: "center",
-              fontsize: "35px",
-              fontfamily: "system-ui",
-          }}>
-            Seams
+          <a className="menu" 
+          style={{
+            fontFamily: 'Courier New, monospace',
+            fontSize: '3rem',
+            color: '#fff',
+            textAlign: 'center',
+            textShadow: '0 0 5px #00F9FF, 0 0 10px #00F9FF, 0 0 20px #00F9FF, 0 0 40px #00F9FF'
+          }
+          } >
+            SEAMS
           </a>
         </div>
         <div className="EmotionVideo" style={{
-          padding: "18%",
+          padding: "12%",
         }}>
-          <p> here comos the camerea if u want delete this this is only a guide</p>   
+          <p className='text' 
+          style={{
+            fontFamily: 'Courier New, monospace',
+            fontSize: '3rem',
+            color: '#fff',
+            textAlign: 'center',
+            textShadow: '0 0 5px #00F9FF, 0 0 10px #00F9FF, 0 0 20px #00F9FF, 0 0 40px #00F9FF'
+          }}> 
+          Emotion Camera Recording
+          </p>
+          <WebcamComponent 
+          audio={false}
+          height={720}
+          screenshotFormat="image/jpeg"
+          width={1280}
+          videoConstraints={videoConstraints}
+          />
+
         </div>
-        <div className="FooterCapture" style={{
+        <div className="FooterCapture"style={{
           padding: "2%"
         }}>
           <button style={{
-            padding: "10px",
-            fontsize: "20px",
-            fontfamily: "system-ui",
-            color: "white",
-            transitionduration: "0.4s",
-            backgroundcolor: "#04AA6D",
-            color: "black",
-            borderRadius: '5px',
-            overflow: 'hidden'
+                backgroundColor: '#0d9ad6',
+                color: '#fff',
+                padding: '10px 20px',
+                border: 'none',
+                borderRadius: '5px',
+                fontSize: '16px',
+                cursor: 'pointer',
           }}>
-             Show Emotions
+             Capture Emotion
              </button>
         </div>
       </header>
     </div>
   );
 }
-
 export default App;
