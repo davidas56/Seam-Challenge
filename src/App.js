@@ -109,20 +109,31 @@ function App() {
               height={720}
               ref={webcamRef}
               screenshotFormat="image/jpeg"
-              width={1280}
+              width={1080}
               videoConstraints={videoConstraints}
             />
           </div>
           {responseData && (
-            <div>
+            <div style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.8)', 
+              borderRadius: '10px', 
+              padding: '20px', 
+              margin: '10px 0', 
+              boxShadow: '0 0 10px #00F9FF, 0 0 20px #00F9FF, 0 0 30px #00F9FF', 
+              color: '#fff', 
+              fontFamily: 'Courier New, monospace', 
+              fontSize: '1.5rem', 
+              textAlign: 'left', 
+              textShadow: '0 0 5px #00F9FF, 0 0 10px #00F9FF'
+            }}>
               <div className="response-container">
                 {responseData?.faces?.map((face, index) => (
-                  <div key={index} className="face-card">
+                  <div key={index} className="face-card" style={{ marginBottom: '20px' }}>
                     <p className="dominant-emotion"><strong>Dominant Emotion:</strong> {face.dominant_emotion}</p>
                     <p className="emotion-breakdown"><strong>Emotion Breakdown:</strong></p>
-                    <ul className="emotion-list">
+                    <ul className="emotion-list" style={{ listStyleType: 'none', padding: 0 }}>
                       {Object.entries(face.emotion).map(([emotion, value]) => (
-                        <li key={emotion} className="emotion-item"><strong>{emotion}:</strong> {value.toFixed(2)}</li>
+                        <li key={emotion} className="emotion-item" style={{ margin: '5px 0' }}><strong>{emotion}:</strong> {value.toFixed(2)}</li>
                       ))}
                     </ul>
                     <p className="region"><strong>Region:</strong> X: {face.region.x}, Y: {face.region.y}, Width: {face.region.w}, Height: {face.region.h}</p>
